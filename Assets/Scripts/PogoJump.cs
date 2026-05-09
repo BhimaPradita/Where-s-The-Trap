@@ -27,7 +27,7 @@ public class PogoJump : MonoBehaviour
     void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        rb = playerMovement.GetRB();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()

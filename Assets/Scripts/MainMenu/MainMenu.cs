@@ -77,10 +77,8 @@ public class MainMenu : MonoBehaviour
         
         isTransitioning = true;
         
-        // Aktifkan fade panel
         fadePanel.gameObject.SetActive(true);
         
-        // Fade out ke blackscreen
         float elapsedTime = 0f;
         Color color = fadePanel.color;
         
@@ -96,10 +94,8 @@ public class MainMenu : MonoBehaviour
         color.a = 1f;
         fadePanel.color = color;
         
-        // Tunggu sebentar di blackscreen
         yield return new WaitForSeconds(0.2f);
         
-        // Quit game
         Application.Quit();
         
         #if UNITY_EDITOR

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
     guid: eb0caa64cccdb3640a7ca92f4e9569fa
+  - enabled: 1
+    path: Assets/Scenes/TrapTest.unity
+    guid: 9e49de9f8df1aa147bdc85c2865ff72f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

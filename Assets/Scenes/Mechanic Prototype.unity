@@ -637,7 +637,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 30
   groundCheck: {fileID: 1919154484}
-  groundCheckRadius: 0.2
+  groundCheckRadius: 0.32
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -763,7 +763,7 @@ MonoBehaviour:
   pogoLayer:
     serializedVersion: 2
     m_Bits: 128
-  pogoForce: 20
+  pogoForce: 25
   pogoEffectObject: {fileID: 446357626}
   pogoEffectDuration: 0.2
   pogoCooldown: 0.5
