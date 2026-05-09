@@ -11,4 +11,20 @@ public class GameOverUI : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void BackToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+    }
 }
