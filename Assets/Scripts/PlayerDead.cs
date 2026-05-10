@@ -7,7 +7,7 @@ public class PlayerDead : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Trap"))
         {
             Time.timeScale = 0f;
             Debug.Log("Player is dead!");
@@ -15,9 +15,9 @@ public class PlayerDead : MonoBehaviour
         }
     }
 
-    void OnTriggeredEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Trap"))
         {
             Time.timeScale = 0f;
             Debug.Log("Player is dead!");

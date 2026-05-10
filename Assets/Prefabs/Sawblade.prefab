@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 3423059711717343419}
   - component: {fileID: 4318124504206345078}
   - component: {fileID: 1707954457007017234}
-  - component: {fileID: 6752756560381152803}
   m_Layer: 7
   m_Name: Sawblade
   m_TagString: Untagged
@@ -264,16 +263,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.587793
---- !u!114 &6752756560381152803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909862758751291182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f653157f2f0e874ab42fe98b821b0e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
-  gameOverUI: {fileID: 0}
