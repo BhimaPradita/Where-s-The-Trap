@@ -2750,8 +2750,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8646975443700485698, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646975443700485698, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646975443700485698, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646975443700485698, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646975443700485698, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646975443700485698, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6940387651490365274, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
