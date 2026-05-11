@@ -40,9 +40,9 @@ public class PlayerSwimming : MonoBehaviour
                 swimUpForce
             );
 
-            // animator.SetBool("isSwim", true);
+            animator.SetBool("isSwimUp", true);
         }
-        else
+        else if(isSwimmingUp == false && rb.linearVelocity.y > 0)
         {
             // Turun perlahan saat tombol dilepas
             rb.linearVelocity = new Vector2(
@@ -50,8 +50,15 @@ public class PlayerSwimming : MonoBehaviour
                 -swimDownForce
             );
 
-            // animator.SetBool("isSwim", false);
+            animator.SetBool("isSwimUp", false);
         }
+
+        // Idle = true hanya saat player tidak bergerak
+        bool isIdle =
+            Mathf.Abs(rb.linearVelocity.x) < 0.1f &&
+            Mathf.Abs(rb.linearVelocity.y) < 0.1f;
+
+        animator.SetBool("isIdle", isIdle);
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -59,7 +66,7 @@ public class PlayerSwimming : MonoBehaviour
         movementInput = context.ReadValue<Vector2>();
 
         // Running animation
-        animator.SetBool("isRunning", movementInput != Vector2.zero);
+        animator.SetBool("isSwimming", movementInput != Vector2.zero);
 
         // Flip character
         if (movementInput.x < 0)
@@ -78,14 +85,12 @@ public class PlayerSwimming : MonoBehaviour
         if (context.performed)
         {
             isSwimmingUp = true;
-            animator.SetBool("isJump", true);
         }
 
         // Saat tombol dilepas
         if (context.canceled)
         {
             isSwimmingUp = false;
-            animator.SetBool("isJump", false);
         }
     }
 }
