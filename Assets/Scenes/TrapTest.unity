@@ -4501,6 +4501,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 357460266}
+    - target: {fileID: 765186215275017001, guid: f7b87bc19d6c255489b18a98940533d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3302713382531229925, guid: f7b87bc19d6c255489b18a98940533d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4650,6 +4654,14 @@ PrefabInstance:
     - target: {fileID: 2629476503719153903, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628394725317791583, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628394725317791583, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4955859379262675395, guid: cfb51ed7094d72f4492ed4747a1586a8, type: 3}
       propertyPath: gameOverUI

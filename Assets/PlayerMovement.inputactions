@@ -32,6 +32,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "11e2f83e-90e0-4a25-a22a-03824ebdf6e5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -197,6 +206,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "SpecialMechanic",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa033193-2793-4055-a8ff-6231126fd6ea",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83d264e8-32f2-4f12-a253-915a7ab2a8b9",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

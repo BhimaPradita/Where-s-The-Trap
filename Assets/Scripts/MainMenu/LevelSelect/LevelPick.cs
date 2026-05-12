@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class LevelPick : MonoBehaviour
 {
     [Header("UI References")]
     // [SerializeField] private GameObject menuPanel;
@@ -13,7 +13,15 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private float fadeDuration = 1.0f;
     [SerializeField] private Color fadeColor = Color.black;
 
+    [Header("Level Pick Settings")]
+    [SerializeField] private string levelName;
     private bool isTransitioning = false;
+
+    public void Level()
+    {
+        fadeDuration = 0.2f;
+        StartCoroutine(FadeOutAndLoadScene(levelName));
+    }
 
     private IEnumerator FadeOutAndLoadScene(string sceneName)
     {
@@ -49,64 +57,5 @@ public class MainMenu : MonoBehaviour
         
         isTransitioning = false;
     }
-
-    public void NewGame()
-    {
-        StartCoroutine(FadeOutAndLoadScene("Stage 1"));
-    }
-
-    public void Level()
-    {
-        fadeDuration = 0.2f;
-        StartCoroutine(FadeOutAndLoadScene("LevelSelect"));
-    }
-
-    public void Setting()
-    {
-        
-    }
-
-    public void Exit()
-    {
-        StartCoroutine(FadeOutAndQuit());
-    }
-
-    public void BackToMainMenu()
-    {
-        StartCoroutine(FadeOutAndLoadScene("MainMenu"));
-    }
-
-    private IEnumerator FadeOutAndQuit()
-    {
-        if (isTransitioning) yield break;
-        
-        isTransitioning = true;
-        
-        fadePanel.gameObject.SetActive(true);
-        
-        float elapsedTime = 0f;
-        Color color = fadePanel.color;
-        
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
-            color.a = alpha;
-            fadePanel.color = color;
-            yield return null;
-        }
-        
-        color.a = 1f;
-        fadePanel.color = color;
-        
-        yield return new WaitForSeconds(0.2f);
-        
-        Application.Quit();
-        
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-        
-        isTransitioning = false;
-    }
 }
+
